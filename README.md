@@ -61,7 +61,7 @@ Lors de votre première visite, suivez les instructions pour créer un compte ad
 
 •	Arrêter les conteneurs :
 ```shell
-docker-compose down
+docker-compose stop
 ```
 
 •	Voir les logs :
