@@ -17,4 +17,4 @@ services:
     volumes:
       - ./cms:/strapi
     ports:
-      - '1337:1337'
+      - ${PORT}:${PORT}
