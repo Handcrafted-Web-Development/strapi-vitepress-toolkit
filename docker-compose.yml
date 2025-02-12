@@ -15,6 +15,6 @@ services:
       APP_KEYS: ${APP_KEYS}
       NODE_ENV: ${NODE_VERSION}
     volumes:
-      - ./cms/strapi:/strapi
+      - ./cms:/strapi
     ports:
       - '1337:1337'
