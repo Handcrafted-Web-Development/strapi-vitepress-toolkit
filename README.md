@@ -30,7 +30,7 @@ Naviguez dans le répertoire du projet et créez un fichier `.env` à partir du 
 
 ```shell
 cd strapi-vitepress-toolkit
-cp .env .env.local
+cp .env.local .env
 ```
 
 Ouvrez le fichier `.env` et ajustez les variables d’environnement selon vos besoins.
