@@ -28,6 +28,7 @@ services:
     env_file: .env
     environment:
       NODE_ENV: ${NODE_VERSION}
+      STRAPI_URL: ${HOST}:${STRAPI_PORT}
     volumes:
       - ./docs:/vitepress
     ports:

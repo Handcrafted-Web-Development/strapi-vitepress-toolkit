@@ -23,3 +23,22 @@ features:
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
 
+<script setup>
+import { ref, onMounted } from 'vue';
+import { getArticles } from '.vitepress/strapi/api';
+
+const articles = ref([]);
+
+onMounted(async () => {
+  articles.value = await getArticles();
+});
+</script>
+
+# Articles de Strapi
+
+<ul>
+  <li v-for="article in articles" :key="article.id">
+    <h2>{{ article.attributes.title }}</h2>
+    <p>{{ article.attributes.content }}</p>
+  </li>
+</ul>
