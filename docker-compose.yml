@@ -17,4 +17,18 @@ services:
     volumes:
       - ./cms:/strapi
     ports:
-      - ${PORT}:${PORT}
+      - ${STRAPI_PORT}:${STRAPI_PORT}
+  vitepress:
+    container_name: vitepress
+    build:
+      context: ./docs/docker
+      args:
+        NODE_VERSION: ${NODE_VERSION}
+    restart: on-failure:3
+    env_file: .env
+    environment:
+      NODE_ENV: ${NODE_VERSION}
+    volumes:
+      - ./docs:/vitepress
+    ports:
+      - ${VITEPRESS_PORT}:${VITEPRESS_PORT}
